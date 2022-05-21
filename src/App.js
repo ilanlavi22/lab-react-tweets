@@ -8,14 +8,15 @@ function App() {
   return (
     <div className="container">
       {tweetsArray.map((tweet) => {
+        const { id, user: { name }, user: { image }, message, user: { handle }, timestamp } = tweet;
         return (
           <Tweet
-            key={tweet.id}
-            name={tweet.user.name}
-            image={tweet.user.image}
-            message={tweet.message}
-            handle={tweet.user.handle}
-            timestamp={tweet.timestamp}
+            key={id}
+            name={name}
+            image={image}
+            message={message}
+            handle={handle}
+            timestamp={timestamp}
           />
         );
       })}
