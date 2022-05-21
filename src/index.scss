@@ -1,0 +1,88 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+  padding: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  border: 1px gray solid;
+}
+.tweet {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px gray solid;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  .tweet-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    img {
+      width: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  .tweet-info {
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+
+    .tweet-header {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 1rem;
+
+      h3 {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      span {
+        color: gray;
+      }
+      .tweet-ellipsis {
+        margin-left: auto;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.actions {
+  display: flex;
+  column-gap: 3rem;
+  margin-block-start: 0.5rem;
+}
+
+@media (max-width: 650px) {
+  .tweet-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 530px) {
+  .tweet-content .tweet-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .tweet .tweet-content .tweet-header .tweet-ellipsis {
+    margin-left: 0;
+  }
+  .actions {
+    justify-content: center;
+  }
+}
