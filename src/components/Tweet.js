@@ -6,7 +6,7 @@ import User from "./User";
 import { FaEllipsisH } from "react-icons/fa";
 
 function Tweet(props) {
-  const { user: { image }, name, handle, timestamp, message } = props.tweet;
+  const { user: { image }, user: { name }, user: { handle }, timestamp, message } = props.tweet;
   return (
     <div className="tweet">
       <div className="tweet-content">
