@@ -9,7 +9,9 @@ function App() {
     <div className="container">
       {tweetsArray.map((tweet) => {
         return (
-          <Tweet tweet={tweet} key={tweet.id} />
+          /* {<Tweet key={tweet.id} tweet={tweet} />} */
+          /* using the spread operator */
+          <Tweet key={tweet.id} {...tweet} />
         );
       })}
     </div>
